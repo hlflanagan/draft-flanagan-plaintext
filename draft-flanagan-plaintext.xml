@@ -4,6 +4,7 @@
 <!ENTITY RFC3629 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.3629.xml">
 <!ENTITY RFC5741 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5741.xml">
 <!ENTITY RFC6949 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6949.xml">
+<!ENTITY I-D.flanagan-nonascii SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.flanagan-nonascii.xml">
 ]>
 <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
 <?rfc strict="yes" ?>
@@ -13,7 +14,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-flanagan-plaintext-00" ipr="trust200902">
+<rfc category="info" docName="draft-flanagan-plaintext-01" ipr="trust200902">
 
   <!-- ***** FRONT MATTER ***** -->
 
@@ -31,7 +32,7 @@
       </address>
     </author>
 
-    <date month="June" year="2014" />
+    <date month="July" year="2014" />
 
     <area>General</area>
 
@@ -55,9 +56,13 @@
 
   <middle>
     <section title="Introduction">
-      <t>One of the requirements documented in <xref target="RFC6949">RFC 
-      6949</xref>, "RFC Series Format Requirements and Future Development,"
-      is the continued support for a plain text publication format.</t>
+      <t>In 2013, after a great deal of community discussion, the decision 
+      was made to shift from the plain text, ASCII-only canonical format to 
+      XML <xref target="XML-ANNOUNCE"/>.  The high-level requirements for 
+      the format of RFCs were defined in <xref target="RFC6949">RFC Series 
+      Format Requirements and Future Development</xref>.  Several different 
+      publication formats will be rendered from that canonical XML, including 
+      HTML, PDF, TXT, and EPUB. </t>
 
       <t>The Unicode Consortium defines 'plain text' as 
       <xref target="unicode-glossary">"Computer-encoded text that consists 
@@ -69,7 +74,7 @@
       <t>While a plain text output for RFCs will continue to be required
       for the foreseeable future, the details of what that means for RFCs in 
       terms of which character encoding may be used, what the page layout 
-      will look like, how to handle figures and artwork, and so on, are 
+      will look like, how to handle figures and artwork, and pagination are
       documented in this draft.</t>
 
       <t>The following assumptions drive the changes in the plain text
@@ -81,12 +86,23 @@
               In particular, handling page breaks for text is tricky.</t>
               <t>Additional publication formats--for example: PDF, HTML--
               will be available that will offer features such as markup, 
-              pagination, etc. </t> 
+              pretty printing, etc. </t> 
+              <t>There is an extensive tool chain in existence among the 
+              community to work with plain text documents.  Similar 
+              functionality may be possible with other publication formats, 
+              but the workflow that uses the existing tool chain must be 
+              supported as much as is considered practical.</t>
             </list>
           </t>
     </section>
 
     <section title="Character Encoding">
+      <t>The use of non-ASCII characters will be allowed in a limited and
+      controlled fashion.  The details regarding the guidance for how to 
+      include non-ASCII characters is under development and documented in
+      <xref target="I-D.flanagan-nonascii">The Use of Non-ASCII 
+      Characters in RFCs</xref>.  Please view the PDF version of that draft.</t>
+
       <t>The character encoding for all plain text documents will be 
       <xref target="RFC3629">UTF-8</xref>.  The file will include a byte order 
       mark (BOM) to provide text reader software with in-band information
@@ -107,8 +123,21 @@
     </section>
 
     <section title="Page Layout">
-      <t>Pagination is no longer required.  Line lengths for both text and
-      artwork, will increase to 85 characters. </t>
+      <t>Arguments both in favor of and against pagination have been offered
+      by members of the community and summarized in RFC 6949.  After further
+      discussion, two plain text outputs will be created during the publication
+      process - one with basic pagination that includes a form feed 
+      instruction every 58 lines at most, depending on the text and 
+      artwork layout, and a second with no pagination at all.  This will
+      allow for both easier cut and paste from the plain text file, 
+      uninterupted diff output, better understanding when you can't tell if 
+      a page break is also a paragraph break, and a better printing experience 
+      for those working with the plain text output .  </t>
+
+      <t>Line lengths for both text and artwork, will increase to 80 
+      characters in order to take advantage of wider screens and 
+      unnecessarily wide page margins. </t>
+
         <section title="Headers and Footers">
           <t>The front matter on the front page (such as the RFC number 
           and category), and the back matter on the last page (the author's 
@@ -148,6 +177,7 @@
       &RFC3629;
       &RFC5741;
       &RFC6949;
+      &I-D.flanagan-nonascii;
     </references>
     <references title="Informative References">
       <reference anchor="unicode-glossary"
@@ -158,6 +188,17 @@
             <organization>The Unicode Consortium</organization>
           </author>
           <date year="2014" />
+        </front>
+      </reference>
+      <reference anchor="XML-ANNOUNCE"
+       target="http://www.rfc-editor.org/pipermail/rfc-interest/2013-May/005584.html
+">
+        <front>
+          <title>"Subject: Direction of the RFC Format Development effort", message to the rfc-interest@rfc-editor.org mailing list</title>
+          <author initials="H." surname="Flanagan">
+             <organization></organization>
+          </author>
+          <date year="2013" month="May" day="2" />
         </front>
       </reference>
     </references>
