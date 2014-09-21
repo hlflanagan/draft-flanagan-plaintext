@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
+<!ENTITY RFC3629 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.3629.xml">
+<!ENTITY RFC5741 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5741.xml">
+<!ENTITY RFC6949 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6949.xml">
+]>
+<?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
+<?rfc strict="yes" ?>
+<?rfc toc="yes"?>
+<?rfc tocdepth="4"?>
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes" ?>
+<?rfc compact="yes" ?>
+<?rfc subcompact="no" ?>
+<rfc category="info" docName="draft-flanagan-plaintext-00" ipr="trust200902">
+
+  <!-- ***** FRONT MATTER ***** -->
+
+  <front>
+    <!-- The abbreviated title is used in the page header - it is only necessary if the 
+         full title is longer than 39 characters -->
+
+    <title abbrev="Abbreviated Title">Requirements for Plain Text RFCs</title>
+    <author fullname="Heather Flanagan" initials="H." surname="Flanagan">
+      <organization>RFC Editor</organization>
+
+      <address>
+        <phone></phone>
+        <email>rse@rfc-editor.org</email>
+      </address>
+    </author>
+
+    <date month="June" year="2014" />
+
+    <area>General</area>
+
+    <keyword>RFC</keyword>
+    <keyword>ASCII</keyword>
+    <keyword>format</keyword>
+    <keyword>plain text</keyword>
+
+    <abstract>
+      <t>This draft documents the change in requirements and layout for the
+      plain-text RFC publication format.
+      </t>
+    </abstract>
+    <note title="Editorial Note (To be removed by the RFC Editor)">
+      <t>Discussion of this draft takes place on the rfc-interest mailing list
+      (rfc-interest@rfc-editor.org), which has its home page at
+      https://www.rfc-editor.org/mailman/listinfo/rfc-interest.
+      </t>
+    </note>
+  </front>
+
+  <middle>
+    <section title="Introduction">
+      <t>One of the requirements documented in <xref target="RFC6949">RFC 
+      6949</xref>, "RFC Series Format Requirements and Future Development,"
+      is the continued support for a plain text publication format.</t>
+
+      <t>The Unicode Consortium defines 'plain text' as 
+      <xref target="unicode-glossary">"Computer-encoded text that consists 
+      only of a sequence of code points from a given standard, with no 
+      other formatting or structural information.  Plain text interchange is 
+      commonly used between computer systems that do not share higher-level 
+      protocols."</xref></t>
+
+      <t>While a plain text output for RFCs will continue to be required
+      for the foreseeable future, the details of what that means for RFCs in 
+      terms of which character encoding may be used, what the page layout 
+      will look like, how to handle figures and artwork, and so on, are 
+      documented in this draft.</t>
+
+      <t>The following assumptions drive the changes in the plain text
+      output for RFCs:</t>
+          <t>
+            <list style="symbols">
+              <t>The existing tools to create the text file are extremely
+              sensitive; manual manipulation is required in the final output.  
+              In particular, handling page breaks for text is tricky.</t>
+              <t>Additional publication formats--for example: PDF, HTML--
+              will be available that will offer features such as markup, 
+              pagination, etc. </t> 
+            </list>
+          </t>
+    </section>
+
+    <section title="Character Encoding">
+      <t>The character encoding for all plain text documents will be 
+      <xref target="RFC3629">UTF-8</xref>.  The file will include a byte order 
+      mark (BOM) to provide text reader software with in-band information
+      about the character encoding scheme used. </t>
+    </section>
+
+    <section title="Figures and Artwork">
+      <t>Authors may continue to include figures drawn with ASCII characters.  
+      If the canonical format includes figures or artwork other than ASCII-art,
+      then the plain text output must include a pointer to the HTML version of
+      the RFC to allow readers to see the relevant artwork.</t>
+      <t>Authors who wish to include ASCII-art for the plain text file and 
+      SVG art for the other outputs may do so, but they should be aware of the
+      potential for confusion to individuals reading the RFC with two unique
+      diagrams describing the same content.</t>
+      <t>ASCII art will have a character width limit of no more than 85
+      characters.</t>
+    </section>
+
+    <section title="Page Layout">
+      <t>Pagination is no longer required.  Line lengths for both text and
+      artwork, will increase to 85 characters. </t>
+        <section title="Headers and Footers">
+          <t>The front matter on the front page (such as the RFC number 
+          and category), and the back matter on the last page (the author's 
+          full names and contact information) will continue with the 
+          structure described in <xref target="RFC5741">RFC 5741</xref>, 
+          "RFC Streams, Headers, and Boilerplates".  Given the removal of the 
+          pagination requirement, running headers and footers will no 
+          longer exist.</t>
+        </section>
+        <section title="Table of Contents">
+          <t>Given the removal of the pagination requirement, the Table of 
+          Contents will list section and subsection numbers and titles, but 
+          will not include page numbers.</t>
+        </section>
+    </section>
+
+    <section anchor="Acknowledgements" title="Acknowledgements">
+      <t>This draft owes a great deal of thanks to the efforts of the RFC 
+      Format Design Team: Nevil Brownlee, Tony Hansen, Joe Hildebrand, Paul 
+      Hoffman, Ted Lemon, Julian Reschke, Adam Roach, Alice Russo, Robert 
+      Sparks, and David Thaler</t>
+    </section>
+
+    <section anchor="IANA" title="IANA Considerations">
+      <t>This memo includes no requests to IANA.</t>
+    </section>
+
+    <section anchor="Security" title="Security Considerations">
+      <t>TBD.</t>
+    </section>
+  </middle>
+
+  <!--  *****BACK MATTER ***** -->
+
+  <back>
+    <references title="Normative References">
+      &RFC3629;
+      &RFC5741;
+      &RFC6949;
+    </references>
+    <references title="Informative References">
+      <reference anchor="unicode-glossary"
+                 target="http://www.unicode.org/glossary/">
+        <front>
+          <title>Glossary of Unicode Terms</title>
+          <author>
+            <organization>The Unicode Consortium</organization>
+          </author>
+          <date year="2014" />
+        </front>
+      </reference>
+    </references>
+
+  </back>
+</rfc>
+
