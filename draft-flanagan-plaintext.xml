@@ -14,7 +14,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-flanagan-plaintext-01" ipr="trust200902">
+<rfc category="info" docName="draft-flanagan-plaintext-02" ipr="trust200902">
 
   <!-- ***** FRONT MATTER ***** -->
 
@@ -22,7 +22,7 @@
     <!-- The abbreviated title is used in the page header - it is only necessary if the 
          full title is longer than 39 characters -->
 
-    <title abbrev="Abbreviated Title">Requirements for Plain Text RFCs</title>
+    <title abbrev="Abbreviated Title">Requirements for Plain-Text RFCs</title>
     <author fullname="Heather Flanagan" initials="H." surname="Flanagan">
       <organization>RFC Editor</organization>
 
@@ -32,13 +32,14 @@
       </address>
     </author>
 
-    <date month="July" year="2014" />
+    <date day="11" month="September" year="2014" />
 
     <area>General</area>
 
     <keyword>RFC</keyword>
     <keyword>ASCII</keyword>
     <keyword>format</keyword>
+    <keyword>plain-text</keyword>
     <keyword>plain text</keyword>
 
     <abstract>
@@ -57,10 +58,10 @@
   <middle>
     <section title="Introduction">
       <t>In 2013, after a great deal of community discussion, the decision 
-      was made to shift from the plain text, ASCII-only canonical format to 
+      was made to shift from the plain-text, ASCII-only canonical format to 
       XML <xref target="XML-ANNOUNCE"/>.  The high-level requirements for 
-      the format of RFCs were defined in <xref target="RFC6949">RFC Series 
-      Format Requirements and Future Development</xref>.  Several different 
+      the format of RFCs were defined in <xref target="RFC6949">"RFC Series 
+      Format Requirements and Future Development</xref>."  Several different 
       publication formats will be rendered from that canonical XML, including 
       HTML, PDF, TXT, and EPUB. </t>
 
@@ -71,40 +72,49 @@
       commonly used between computer systems that do not share higher-level 
       protocols."</xref></t>
 
-      <t>While a plain text output for RFCs will continue to be required
-      for the foreseeable future, the details of what that means for RFCs in 
+      <t>A plain-text output for RFCs will continue to be required
+      for the foreseeable future.  The details of what that means for RFCs in 
       terms of which character encoding may be used, what the page layout 
-      will look like, how to handle figures and artwork, and pagination are
-      documented in this draft.</t>
+      will look like, how to handle figures and artwork, and how pagination 
+      will be handled, are documented in this draft.</t>
 
-      <t>The following assumptions drive the changes in the plain text
+      <t>The following assumptions drive the changes in the plain-text
       output for RFCs:</t>
           <t>
             <list style="symbols">
-              <t>The existing tools to create the text file are extremely
+              <t>The existing tools used by the RFC Editor and many members
+              of the author community to create the text file are extremely
               sensitive; manual manipulation is required in the final output.  
-              In particular, handling page breaks for text is tricky.</t>
+              In particular, handling page breaks and associated widows and
+              orphans for paginated output is tricky.</t>
               <t>Additional publication formats--for example: PDF, HTML--
               will be available that will offer features such as markup, 
               pretty printing, etc. </t> 
               <t>There is an extensive tool chain in existence among the 
-              community to work with plain text documents.  Similar 
+              community to work with plain-text documents.  Similar 
               functionality may be possible with other publication formats, 
               but the workflow that uses the existing tool chain must be 
               supported as much as is considered practical.</t>
             </list>
           </t>
+      <t>Where practical, the original guidance for the structure of a 
+      plain-text RFC has been kept, such as with line lengths, lines per 
+      page, etc. <xref target="INS2AUTH" /></t>
+
+      <t>Note that this document provides guidance for plain-text RFCs; 
+      Internet-Drafts are out of scope.</t>
     </section>
 
     <section title="Character Encoding">
-      <t>The use of non-ASCII characters will be allowed in a limited and
+      <t>Plain text RFCs will use the <xref target="RFC3629">UTF-8</xref> 
+      character encoding.  That said, 
+      the use of non-ASCII characters will be only allowed in a limited and
       controlled fashion.  The details regarding the guidance for how to 
       include non-ASCII characters is under development and documented in
-      <xref target="I-D.flanagan-nonascii">The Use of Non-ASCII 
-      Characters in RFCs</xref>.  Please view the PDF version of that draft.</t>
+      <xref target="I-D.flanagan-nonascii">"The Use of Non-ASCII 
+      Characters in RFCs"</xref>.  Please view the PDF version of that draft.</t>
 
-      <t>The character encoding for all plain text documents will be 
-      <xref target="RFC3629">UTF-8</xref>.  The file will include a byte order 
+      <t>The plain-text file will include a byte order 
       mark (BOM) to provide text reader software with in-band information
       about the character encoding scheme used. </t>
     </section>
@@ -112,31 +122,28 @@
     <section title="Figures and Artwork">
       <t>Authors may continue to include figures drawn with ASCII characters.  
       If the canonical format includes figures or artwork other than ASCII-art,
-      then the plain text output must include a pointer to the HTML version of
-      the RFC to allow readers to see the relevant artwork.</t>
-      <t>Authors who wish to include ASCII-art for the plain text file and 
+      then the plain-text output must include a pointer to the relevant figure 
+      in the HTML version of the RFC to allow readers to see the relevant 
+      artwork.</t>
+
+      <t>Authors who wish to include ASCII-art for the plain-text file and 
       SVG art for the other outputs may do so, but they should be aware of the
       potential for confusion to individuals reading the RFC with two unique
       diagrams describing the same content.</t>
-      <t>ASCII art will have a character width limit of no more than 85
-      characters.</t>
+
     </section>
 
-    <section title="Page Layout">
+    <section title="General Page Format Layout">
       <t>Arguments both in favor of and against pagination have been offered
       by members of the community and summarized in RFC 6949.  After further
-      discussion, two plain text outputs will be created during the publication
+      discussion, two plain-text outputs will be created during the publication
       process - one with basic pagination that includes a form feed 
-      instruction every 58 lines at most, depending on the text and 
-      artwork layout, and a second with no pagination at all.  This will
-      allow for both easier cut and paste from the plain text file, 
-      uninterupted diff output, better understanding when you can't tell if 
-      a page break is also a paragraph break, and a better printing experience 
-      for those working with the plain text output .  </t>
-
-      <t>Line lengths for both text and artwork, will increase to 80 
-      characters in order to take advantage of wider screens and 
-      unnecessarily wide page margins. </t>
+      instruction every 58 lines at most, including blank lines, depending on 
+      the text and artwork layout, and a second with no pagination at all.  
+      This will allow for both easier cut and paste from the plain-text file, 
+      uninterupted diff output, disambiguation between page breaks that may 
+      also be paragraph breaks, and a better printing experience 
+      for those working with the plain-text output .  </t>
 
         <section title="Headers and Footers">
           <t>The front matter on the front page (such as the RFC number 
@@ -147,10 +154,45 @@
           pagination requirement, running headers and footers will no 
           longer exist.</t>
         </section>
+
         <section title="Table of Contents">
           <t>Given the removal of the pagination requirement, the Table of 
           Contents will list section and subsection numbers and titles, but 
           will not include page numbers.</t>
+        </section>
+
+        <section title="Line Width">
+          <t>Each line must be limited to 72 characters followed by the
+          character sequence that denotes an end-of-line (EOL).  This
+          limit includes any left-side indentation.</t>
+
+          <t>Note: A plain-text RFC is expected to be stored on a
+          disk file using the EOL sequence of that system.  For
+          example, MS DOS-based systems use the two-character
+          sequence: CR LF (Carriage Return followed by Line Feed),
+          Unix systems use the single character LF for EOL, and
+          EBCDIC systems use the single character NL (New Line).</t>
+
+          <t>Whenever an RFC is transmitted across the Internet,
+          Internet protocol convention requires that each line of
+          text be followed by the two-character EOL sequence CR LF
+          (Carriage Return followed by Line Feed).  A user level
+          protocol (e.g., FTP, Telnet, HTTP, SMTP, ...) must make
+          the appropriate EOL transformation at each line end.
+          Note that binary transmission of plain-text RFC files
+          can cause the sender's EOL convention to "leak" into the
+          receiver, causing confusion.</t>
+        </section>
+
+        <section title="Line Spacing">
+          <t>Use single-spaced text within a paragraph, and one blank line
+           between paragraphs.</t>
+        </section>
+
+        <section title="Hyphenation">
+          <t>Hyphenated words, including hyphenated word sequences (e.g.,
+          "Internet-Draft"), should not be split across successive lines.
+          </t>
         </section>
     </section>
 
@@ -158,7 +200,7 @@
       <t>This draft owes a great deal of thanks to the efforts of the RFC 
       Format Design Team: Nevil Brownlee, Tony Hansen, Joe Hildebrand, Paul 
       Hoffman, Ted Lemon, Julian Reschke, Adam Roach, Alice Russo, Robert 
-      Sparks, and David Thaler</t>
+      Sparks, and David Thaler.</t>
     </section>
 
     <section anchor="IANA" title="IANA Considerations">
@@ -189,6 +231,16 @@
           </author>
           <date year="2014" />
         </front>
+      </reference>
+      <reference anchor="INS2AUTH"
+                 target="http://www.rfc-editor.org/rfc-editor/instructions2authors.txt">
+         <front>
+           <title>Instructions to Request for Comments (RFC) Authors</title>
+           <author>
+             <organization>RFC Editor</organization>
+           </author>
+           <date month="August" year="2004" />
+         </front>
       </reference>
       <reference anchor="XML-ANNOUNCE"
        target="http://www.rfc-editor.org/pipermail/rfc-interest/2013-May/005584.html
