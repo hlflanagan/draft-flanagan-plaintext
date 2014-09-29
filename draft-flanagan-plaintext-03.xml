@@ -17,44 +17,52 @@
 <?rfc subcompact="no" ?>
 <rfc category="info" docName="draft-flanagan-plaintext-03" ipr="trust200902">
 
-  <!-- ***** FRONT MATTER ***** -->
+<!-- ***** FRONT MATTER ***** -->
 
-  <front>
-    <!-- The abbreviated title is used in the page header - it is only necessary if the 
-         full title is longer than 39 characters -->
+<front>
+<!-- The abbreviated title is used in the page header - it is only necessary if the full title is longer than 39 characters -->
 
-    <title abbrev="Abbreviated Title">Requirements for Plain-Text RFCs</title>
-    <author fullname="Heather Flanagan" initials="H." surname="Flanagan">
-      <organization>RFC Editor</organization>
+  <title abbrev="Abbreviated Title">Requirements for Plain-Text RFCs</title>
+  <author fullname="Heather Flanagan" initials="H." surname="Flanagan">
+    <organization>RFC Editor</organization>
 
-      <address>
-        <phone></phone>
-        <email>rse@rfc-editor.org</email>
-      </address>
-    </author>
+    <address>
+      <phone></phone>
+      <email>rse@rfc-editor.org</email>
+    </address>
+  </author>
 
+<<<<<<< HEAD:draft-flanagan-plaintext.xml
     <date day="29" month="September" year="2014" />
+=======
+  <date day="22" month="September" year="2014" />
+>>>>>>> FETCH_HEAD:draft-flanagan-plaintext-03.xml
 
-    <area>General</area>
+  <area>General</area>
 
-    <keyword>RFC</keyword>
-    <keyword>ASCII</keyword>
-    <keyword>format</keyword>
-    <keyword>plain-text</keyword>
-    <keyword>plain text</keyword>
+  <keyword>RFC</keyword>
+  <keyword>ASCII</keyword>
+  <keyword>format</keyword>
+  <keyword>plain-text</keyword>
+  <keyword>plain text</keyword>
 
-    <abstract>
-      <t>This draft documents the change in requirements and layout for the
-      plain-text RFC publication format.
-      </t>
-    </abstract>
-    <note title="Editorial Note (To be removed by the RFC Editor)">
-      <t>Discussion of this draft takes place on the rfc-interest mailing list
+  <abstract>
+      <t>In 2013, after a great deal of community discussion, the decision 
+      was made to shift from the plain-text, ASCII-only canonical format to 
+      XML.  The high-level requirements for the format of RFCs were defined 
+      in RFC6949, "RFC Series Format Requirements and Future Development."  
+      Several different publication formats will be rendered from that 
+      canonical XML, including HTML, PDF, TXT, and EPUB.  This draft documents 
+      the change in requirements and layout for the plain-text RFC publication 
+      format.</t>
+  </abstract>
+  <note title="Editorial Note (To be removed by the RFC Editor)">
+    <t>Discussion of this draft takes place on the rfc-interest mailing list
       (rfc-interest@rfc-editor.org), which has its home page at
       https://www.rfc-editor.org/mailman/listinfo/rfc-interest.
-      </t>
-    </note>
-  </front>
+    </t>
+  </note>
+</front>
 
   <middle>
     <section title="Introduction">
@@ -77,24 +85,24 @@
       for the foreseeable future.  The details of what that means for RFCs in 
       terms of which character encoding may be used, what the page layout 
       will look like, how to handle figures and artwork, and how pagination 
-      will be handled, are documented in this draft.</t>
+      will be handled, are documented in this memo.</t>
 
       <t>The following assumptions drive the changes in the plain-text
       output for RFCs:</t>
           <t>
             <list style="symbols">
               <t>The existing tools used by the RFC Editor and many members
-              of the author community to create the text file are extremely
-              sensitive; manual manipulation is required in the final output.  
-              In particular, handling page breaks and associated widows and
-              orphans for paginated output is tricky.</t>
+              of the author community to create the text file are complicated
+              to change and support; manual manipulation is often required 
+              for the final output.  In particular, handling page breaks and 
+              associated widows and orphans for paginated output is tricky.</t>
               <t>Additional publication formats--for example: PDF, HTML--
               will be available that will offer features such as markup, 
               pretty printing, etc. </t> 
               <t>There is an extensive tool chain in existence among the 
               community to work with plain-text documents.  Similar 
               functionality may be possible with other publication formats, 
-              but the workflow that uses the existing tool chain must be 
+              but the workflow that uses the existing tool chain should be 
               supported as much as is considered practical.</t>
             </list>
           </t>
@@ -107,8 +115,8 @@
     </section>
 
     <section title="Character Encoding">
-      <t>Plain text RFCs will use the <xref target="RFC3629">UTF-8</xref> 
-      character encoding.  That said, 
+      <t>Plain-text files for RFCs will use the 
+      <xref target="RFC3629">UTF-8</xref> character encoding.  That said, 
       the use of non-ASCII characters will be only allowed in a limited and
       controlled fashion.  The details regarding the guidance for how to 
       include non-ASCII characters is under development and documented in
@@ -130,7 +138,9 @@
       <t>Authors who wish to include ASCII-art for the plain-text file and 
       SVG art for the other outputs may do so, but they should be aware of the
       potential for confusion to individuals reading the RFC with two unique
-      diagrams describing the same content.</t>
+      diagrams describing the same content.  If there is conflicting 
+      information between the publication formats, please review the XML or 
+      PDF files to resolve the conflict.</t>
 
     </section>
 
@@ -206,6 +216,15 @@
     <section anchor="Security" title="Security Considerations">
       <t>TBD.</t>
     </section>
+
+  <section anchor="Changes" title="Change Log for the Draft">
+    <section anchor="changes3" title="-02 to -03">
+      <t>Abstract: expanded</t>
+      <t>Introduction: adjusted language of assumptions</t>
+      <t>Figures and Artwork: adjusted to indicate where to go in case information for the images conflicts between different formats</t>
+    </section>
+  </section>
+
   </middle>
 
   <!--  *****BACK MATTER ***** -->
