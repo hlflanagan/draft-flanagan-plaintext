@@ -4,17 +4,23 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                        September 29, 2014
-Expires: April 2, 2015
+Intended status: Informational                           October 1, 2014
+Expires: April 4, 2015
 
 
                     Requirements for Plain-Text RFCs
-                      draft-flanagan-plaintext-03
+                      draft-flanagan-plaintext-04
 
 Abstract
 
-   This draft documents the change in requirements and layout for the
-   plain-text RFC publication format.
+   In 2013, after a great deal of community discussion, the decision was
+   made to shift from the plain-text, ASCII-only canonical format to
+   XML.  The high-level requirements for the format of RFCs were defined
+   in RFC6949, "RFC Series Format Requirements and Future Development."
+   Several different publication formats will be rendered from that
+   canonical XML, including HTML, PDF, TXT, and EPUB.  This draft
+   documents the change in requirements and layout for the plain-text
+   RFC publication format.
 
 Editorial Note (To be removed by the RFC Editor)
 
@@ -37,12 +43,20 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 2, 2015.
+   This Internet-Draft will expire on April 4, 2015.
 
 Copyright Notice
 
    Copyright (c) 2014 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
+
+
+
+
+Flanagan                  Expires April 4, 2015                 [Page 1]
+
+Internet-Draft              Abbreviated Title               October 2014
+
 
    This document is subject to BCP 78 and the IETF Trust's Legal
    Provisions Relating to IETF Documents
@@ -50,14 +64,6 @@ Copyright Notice
    publication of this document.  Please review these documents
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
-
-
-
-Flanagan                  Expires April 2, 2015                 [Page 1]
-
-Internet-Draft              Abbreviated Title             September 2014
-
-
    include Simplified BSD License text as described in Section 4.e of
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
@@ -66,20 +72,24 @@ Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Character Encoding  . . . . . . . . . . . . . . . . . . . . .   3
-   3.  Figures and Artwork . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Figures and Artwork . . . . . . . . . . . . . . . . . . . . .   4
    4.  General Page Format Layout  . . . . . . . . . . . . . . . . .   4
      4.1.  Headers and Footers . . . . . . . . . . . . . . . . . . .   4
      4.2.  Table of Contents . . . . . . . . . . . . . . . . . . . .   4
      4.3.  Line Width  . . . . . . . . . . . . . . . . . . . . . . .   4
-     4.4.  Line Spacing  . . . . . . . . . . . . . . . . . . . . . .   4
+     4.4.  Line Spacing  . . . . . . . . . . . . . . . . . . . . . .   5
      4.5.  Hyphenation . . . . . . . . . . . . . . . . . . . . . . .   5
    5.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   5
    6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
    7.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
-     8.2.  Informative References  . . . . . . . . . . . . . . . . .   5
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
+   8.  Change Log for the Draft  . . . . . . . . . . . . . . . . . .   5
+     8.1.  -03 to -04  . . . . . . . . . . . . . . . . . . . . . . .   5
+     8.2.  -02 to -03  . . . . . . . . . . . . . . . . . . . . . . .   5
+     8.3.  -01 to -02  . . . . . . . . . . . . . . . . . . . . . . .   6
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   6
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .   6
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   7
 
 1.  Introduction
 
@@ -96,29 +106,28 @@ Table of Contents
    text interchange is commonly used between computer systems that do
    not share higher-level protocols." [unicode-glossary]
 
+
+
+
+Flanagan                  Expires April 4, 2015                 [Page 2]
+
+Internet-Draft              Abbreviated Title               October 2014
+
+
    A plain-text output for RFCs will continue to be required for the
    foreseeable future.  The details of what that means for RFCs in terms
    of which character encoding may be used, what the page layout will
    look like, how to handle figures and artwork, and how pagination will
-   be handled, are documented in this draft.
+   be handled, are documented in this memo.
 
    The following assumptions drive the changes in the plain-text output
    for RFCs:
 
-
-
-
-
-Flanagan                  Expires April 2, 2015                 [Page 2]
-
-Internet-Draft              Abbreviated Title             September 2014
-
-
    o  The existing tools used by the RFC Editor and many members of the
-      author community to create the text file are extremely sensitive;
-      manual manipulation is required in the final output.  In
-      particular, handling page breaks and associated widows and orphans
-      for paginated output is tricky.
+      author community to create the text file are complicated to change
+      and support; manual manipulation is often required for the final
+      output.  In particular, handling page breaks and associated widows
+      and orphans for paginated output is tricky.
 
    o  Additional publication formats--for example: PDF, HTML-- will be
       available that will offer features such as markup, pretty
@@ -127,7 +136,7 @@ Internet-Draft              Abbreviated Title             September 2014
    o  There is an extensive tool chain in existence among the community
       to work with plain-text documents.  Similar functionality may be
       possible with other publication formats, but the workflow that
-      uses the existing tool chain must be supported as much as is
+      uses the existing tool chain should be supported as much as is
       considered practical.
 
    Where practical, the original guidance for the structure of a plain-
@@ -139,16 +148,27 @@ Internet-Draft              Abbreviated Title             September 2014
 
 2.  Character Encoding
 
-   Plain text RFCs will use the UTF-8 [RFC3629] character encoding.
-   That said, the use of non-ASCII characters will be only allowed in a
-   limited and controlled fashion.  The details regarding the guidance
-   for how to include non-ASCII characters is under development and
-   documented in "The Use of Non-ASCII Characters in RFCs"
-   [I-D.flanagan-nonascii].  Please view the PDF version of that draft.
+   Plain-text files for RFCs will use the UTF-8 [RFC3629] character
+   encoding.  That said, the use of non-ASCII characters will be only
+   allowed in a limited and controlled fashion.  The details regarding
+   the guidance for how to include non-ASCII characters is under
+   development and documented in "The Use of Non-ASCII Characters in
+   RFCs" [I-D.flanagan-nonascii].  Please view the PDF version of that
+   draft.
 
    The plain-text file will include a byte order mark (BOM) to provide
    text reader software with in-band information about the character
    encoding scheme used.
+
+
+
+
+
+
+Flanagan                  Expires April 4, 2015                 [Page 3]
+
+Internet-Draft              Abbreviated Title               October 2014
+
 
 3.  Figures and Artwork
 
@@ -161,14 +181,9 @@ Internet-Draft              Abbreviated Title             September 2014
    Authors who wish to include ASCII-art for the plain-text file and SVG
    art for the other outputs may do so, but they should be aware of the
    potential for confusion to individuals reading the RFC with two
-   unique diagrams describing the same content.
-
-
-
-Flanagan                  Expires April 2, 2015                 [Page 3]
-
-Internet-Draft              Abbreviated Title             September 2014
-
+   unique diagrams describing the same content.  If there is conflicting
+   information between the publication formats, please review the XML or
+   PDF files to resolve the conflict.
 
 4.  General Page Format Layout
 
@@ -202,6 +217,15 @@ Internet-Draft              Abbreviated Title             September 2014
    Note: A plain-text RFC is expected to be stored on a disk file using
    the EOL sequence of that system.  For example, MS DOS-based systems
    use the two-character sequence: CR LF (Carriage Return followed by
+
+
+
+
+Flanagan                  Expires April 4, 2015                 [Page 4]
+
+Internet-Draft              Abbreviated Title               October 2014
+
+
    Line Feed), Unix systems use the single character LF for EOL, and
    EBCDIC systems use the single character NL (New Line).
 
@@ -217,14 +241,6 @@ Internet-Draft              Abbreviated Title             September 2014
 
    Use single-spaced text within a paragraph, and one blank line between
    paragraphs.
-
-
-
-
-Flanagan                  Expires April 2, 2015                 [Page 4]
-
-Internet-Draft              Abbreviated Title             September 2014
-
 
 4.5.  Hyphenation
 
@@ -246,9 +262,47 @@ Internet-Draft              Abbreviated Title             September 2014
 
    TBD.
 
-8.  References
+8.  Change Log for the Draft
 
-8.1.  Normative References
+8.1.  -03 to -04
+
+   Change Log for the Draft: forgot to complete the change log between
+   the various revisions of the draft
+
+8.2.  -02 to -03
+
+   Abstract: expanded
+
+   Introduction: adjusted language of assumptions
+
+
+
+Flanagan                  Expires April 4, 2015                 [Page 5]
+
+Internet-Draft              Abbreviated Title               October 2014
+
+
+   Figures and Artwork: adjusted to indicate where to go in case
+   information for the images conflicts between different formats
+
+   General Page Layout: switched back to producing one basic paginated
+   format, with an expectation of instructions and/or a script to create
+   local, unpaginated copies for individual use.
+
+8.3.  -01 to -02
+
+   Introduction: added pointer to original page layout information
+
+   Character encoding: clarified language around encoding and use of
+   BOMs
+
+   General Page Format Layout: removed increased line width requirement;
+   added sections on Line Width, Line Spacing, and Hyphenation (pulled
+   from 2223-bis
+
+9.  References
+
+9.1.  Normative References
 
    [I-D.flanagan-nonascii]
               Flanagan, H., "The Use of Non-ASCII Characters in RFCs",
@@ -267,7 +321,7 @@ Internet-Draft              Abbreviated Title             September 2014
    [RFC6949]  Flanagan, H. and N. Brownlee, "RFC Series Format
               Requirements and Future Development", RFC 6949, May 2013.
 
-8.2.  Informative References
+9.2.  Informative References
 
    [INS2AUTH]
               RFC Editor, "Instructions to Request for Comments (RFC)
@@ -277,9 +331,11 @@ Internet-Draft              Abbreviated Title             September 2014
 
 
 
-Flanagan                  Expires April 2, 2015                 [Page 5]
+
+
+Flanagan                  Expires April 4, 2015                 [Page 6]
 
-Internet-Draft              Abbreviated Title             September 2014
+Internet-Draft              Abbreviated Title               October 2014
 
 
    [XML-ANNOUNCE]
@@ -333,4 +389,4 @@ Author's Address
 
 
 
-Flanagan                  Expires April 2, 2015                 [Page 6]
+Flanagan                  Expires April 4, 2015                 [Page 7]
