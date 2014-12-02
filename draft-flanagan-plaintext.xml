@@ -33,7 +33,7 @@
     </address>
   </author>
 
-  <date day="4" month="November" year="2014" />
+  <date day="2" month="December" year="2014" />
 
   <area>General</area>
 
@@ -75,7 +75,7 @@
       publication formats rendered from the XML.  This draft documents 
       the rendering requirements for the plain-text RFC publication format.  
       These requirements do not apply to plain-text RFCs published before
-      the format cut over.</t>
+      the format transition.</t>
 
       <t>The Unicode Consortium defines 'plain text' as 
       <xref target="UNICODE-GLOSSARY">"Computer-encoded text that consists 
@@ -196,9 +196,8 @@
     </section>
 
     <section anchor="elements" title="Elements from the xml2rfc v3 vocabulary">
-        <t>The plain-text format will not contain any of the links or tags 
-        from the XML; any metadata not also expressed as a visual part of 
-        the document will be not be displayed in this format 
+        <t>The plain-text format will only display metadata from the XML that 
+        is also expressed as a visual part of the document 
         <xref target="I-D.hoffman-xml2rfc"/>.</t>
     </section>
 

@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                          November 4, 2014
-Expires: May 8, 2015
+Intended status: Informational                          December 2, 2014
+Expires: June 5, 2015
 
 
                     Requirements for Plain-Text RFCs
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 8, 2015.
+   This Internet-Draft will expire on June 5, 2015.
 
 
 
@@ -53,9 +53,9 @@ Status of This Memo
 
 
 
-Flanagan                   Expires May 8, 2015                  [Page 1]
+Flanagan                  Expires June 5, 2015                  [Page 1]
 
-Internet-Draft               Plain-Text RFCs               November 2014
+Internet-Draft               Plain-Text RFCs               December 2014
 
 
 Copyright Notice
@@ -109,15 +109,15 @@ Table of Contents
 
 
 
-Flanagan                   Expires May 8, 2015                  [Page 2]
+Flanagan                  Expires June 5, 2015                  [Page 2]
 
-Internet-Draft               Plain-Text RFCs               November 2014
+Internet-Draft               Plain-Text RFCs               December 2014
 
 
    still be one of the publication formats rendered from the XML.  This
    draft documents the rendering requirements for the plain-text RFC
    publication format.  These requirements do not apply to plain-text
-   RFCs published before the format cut over.
+   RFCs published before the format transition.
 
    The Unicode Consortium defines 'plain text' as "Computer-encoded text
    that consists only of a sequence of code points from a given
@@ -165,9 +165,9 @@ Internet-Draft               Plain-Text RFCs               November 2014
 
 
 
-Flanagan                   Expires May 8, 2015                  [Page 3]
+Flanagan                  Expires June 5, 2015                  [Page 3]
 
-Internet-Draft               Plain-Text RFCs               November 2014
+Internet-Draft               Plain-Text RFCs               December 2014
 
 
 2.  Character Encoding
@@ -221,9 +221,9 @@ Internet-Draft               Plain-Text RFCs               November 2014
 
 
 
-Flanagan                   Expires May 8, 2015                  [Page 4]
+Flanagan                  Expires June 5, 2015                  [Page 4]
 
-Internet-Draft               Plain-Text RFCs               November 2014
+Internet-Draft               Plain-Text RFCs               December 2014
 
 
 4.2.  Table of Contents
@@ -255,9 +255,8 @@ Internet-Draft               Plain-Text RFCs               November 2014
 
 5.  Elements from the xml2rfc v3 vocabulary
 
-   The plain-text format will not contain any of the links or tags from
-   the XML; any metadata not also expressed as a visual part of the
-   document will be not be displayed in this format
+   The plain-text format will only display metadata from the XML that is
+   also expressed as a visual part of the document
    [I-D.hoffman-xml2rfc].
 
 6.  Acknowledgements
@@ -277,9 +276,10 @@ Internet-Draft               Plain-Text RFCs               November 2014
 
 
 
-Flanagan                   Expires May 8, 2015                  [Page 5]
+
+Flanagan                  Expires June 5, 2015                  [Page 5]
 
-Internet-Draft               Plain-Text RFCs               November 2014
+Internet-Draft               Plain-Text RFCs               December 2014
 
 
 8.  Security Considerations
@@ -333,9 +333,9 @@ Internet-Draft               Plain-Text RFCs               November 2014
 
 
 
-Flanagan                   Expires May 8, 2015                  [Page 6]
+Flanagan                  Expires June 5, 2015                  [Page 6]
 
-Internet-Draft               Plain-Text RFCs               November 2014
+Internet-Draft               Plain-Text RFCs               December 2014
 
 
 10.  References
@@ -389,9 +389,9 @@ Internet-Draft               Plain-Text RFCs               November 2014
 
 
 
-Flanagan                   Expires May 8, 2015                  [Page 7]
+Flanagan                  Expires June 5, 2015                  [Page 7]
 
-Internet-Draft               Plain-Text RFCs               November 2014
+Internet-Draft               Plain-Text RFCs               December 2014
 
 
 Author's Address
@@ -445,4 +445,4 @@ Author's Address
 
 
 
-Flanagan                   Expires May 8, 2015                  [Page 8]
+Flanagan                  Expires June 5, 2015                  [Page 8]
