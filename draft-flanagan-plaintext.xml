@@ -82,8 +82,8 @@
       only of a sequence of code points from a given standard, with no 
       other formatting or structural information.  Plain text interchange is 
       commonly used between computer systems that do not share higher-level 
-      protocols." </xref>  In other words, plain-text files cannot include
-      character formatting or style information.  The actual character 
+      protocols." </xref>  In other words, plain-text files cannot include 
+      embedded character formatting or style information.  The actual character 
       encoding, however, is not limited to any particular sequence of code
       points.</t>
 

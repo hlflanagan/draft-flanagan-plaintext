@@ -124,9 +124,9 @@ Internet-Draft               Plain-Text RFCs               December 2014
    standard, with no other formatting or structural information.  Plain
    text interchange is commonly used between computer systems that do
    not share higher-level protocols."  [UNICODE-GLOSSARY]  In other
-   words, plain-text files cannot include character formatting or style
-   information.  The actual character encoding, however, is not limited
-   to any particular sequence of code points.
+   words, plain-text files cannot include embedded character formatting
+   or style information.  The actual character encoding, however, is not
+   limited to any particular sequence of code points.
 
    A plain-text output for RFCs will continue to be required for the
    foreseeable future.  The details of what that means for RFCs in terms
