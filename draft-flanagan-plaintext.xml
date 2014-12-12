@@ -33,7 +33,7 @@
     </address>
   </author>
 
-  <date day="2" month="December" year="2014" />
+  <date day="12" month="December" year="2014" />
 
   <area>General</area>
 
@@ -82,7 +82,10 @@
       only of a sequence of code points from a given standard, with no 
       other formatting or structural information.  Plain text interchange is 
       commonly used between computer systems that do not share higher-level 
-      protocols." </xref></t>
+      protocols." </xref>  In other words, plain-text files cannot include
+      character formatting or style information.  The actual character 
+      encoding, however, is not limited to any particular sequence of code
+      points.</t>
 
       <t>A plain-text output for RFCs will continue to be required
       for the foreseeable future.  The details of what that means for RFCs in 
@@ -144,7 +147,7 @@
       SVG art for the other outputs may do so, but they should be aware of the
       potential for confusion to individuals reading the RFC with two unique
       diagrams describing the same content.  If there is conflicting 
-      information between the publication formats, please review the XML or 
+      information between the publication formats, please review the XML and 
       PDF files to resolve the conflict.</t>
 
     </section>
@@ -196,9 +199,14 @@
     </section>
 
     <section anchor="elements" title="Elements from the xml2rfc v3 vocabulary">
-        <t>The plain-text format will only display metadata from the XML that 
-        is also expressed as a visual part of the document 
+        <t>The plain-text does not attempt to render all metadata from the 
+        XML.  URIs that occur in targets may be placed into parenthetical 
+        expressions or reference entries. 
         <xref target="I-D.hoffman-xml2rfc"/>.</t>
+
+        <t>Since plain-text cannot include any rich-text-style formatting, 
+        such as bold or italic fonts, tags such as &lt;em&gt; and &lt;strong&gt;
+        will not be rendered in any way in the plain-text draft.</t>
     </section>
 
 
@@ -219,7 +227,8 @@
 
   <section anchor="Changes" title="Change Log for the Draft">
     <section anchor="changes5" title="-04 to -05">
-      <t>Abstract and Introduction: Revised for better readability</t>
+      <t>Abstract and Introduction: Revised for better readability; 
+      clarified the definition and implications of the term "plain-text"</t>
       <t>General Page Format Layout: Added explicit EOL detail and added
       some clarification regarding pagination</t>
       <t>Elements from the xml2rfc v3 vocabulary: section added</t>
