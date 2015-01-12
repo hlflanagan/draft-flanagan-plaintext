@@ -53,7 +53,7 @@
       publication formats rendered from the XML.  This draft documents 
       the rendering requirements for the plain-text RFC publication format.  
       These requirements do not apply to plain-text RFCs published before
-      the format cut over.</t>
+      the format transition.</t>
   </abstract>
   <note title="Editorial Note (To be removed by the RFC Editor)">
     <t>Discussion of this draft takes place on the rfc-interest mailing list
@@ -226,6 +226,9 @@
     </section>
 
   <section anchor="Changes" title="Change Log for the Draft">
+    <section anchor="changes6" title="-05 to -06">
+      <t>Abstract: Changed "cut over" to "transition"</t>
+    </section>
     <section anchor="changes5" title="-04 to -05">
       <t>Abstract and Introduction: Revised for better readability; 
       clarified the definition and implications of the term "plain-text"</t>
