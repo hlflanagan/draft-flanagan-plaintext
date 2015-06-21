@@ -16,7 +16,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-flanagan-plaintext-05" ipr="trust200902">
+<rfc category="info" docName="draft-flanagan-plaintext-06" ipr="trust200902">
 
 <!-- ***** FRONT MATTER ***** -->
 
@@ -30,10 +30,11 @@
     <address>
       <phone></phone>
       <email>rse@rfc-editor.org</email>
+      <uri>http://orcid.org/0000-0002-2647-2220</uri>
     </address>
   </author>
 
-  <date day="12" month="January" year="2015" />
+  <date day="21" month="June" year="2015" />
 
   <area>General</area>
 
@@ -53,7 +54,7 @@
       publication formats rendered from the XML.  This draft documents 
       the rendering requirements for the plain-text RFC publication format.  
       These requirements do not apply to plain-text RFCs published before
-      the format cut over.</t>
+      the format transition.</t>
   </abstract>
   <note title="Editorial Note (To be removed by the RFC Editor)">
     <t>Discussion of this draft takes place on the rfc-interest mailing list
@@ -84,8 +85,8 @@
       commonly used between computer systems that do not share higher-level 
       protocols." </xref>  In other words, plain-text files cannot include 
       embedded character formatting or style information.  The actual character 
-      encoding for a plain-text file, however, is not limited to ASCII or any
-      other character encoding system.</t>
+      encoding, however, is not limited to any particular sequence of code
+      points.</t>
 
       <t>A plain-text output for RFCs will continue to be required
       for the foreseeable future.  The details of what that means for RFCs in 
@@ -199,10 +200,12 @@
     </section>
 
     <section anchor="elements" title="Elements from the xml2rfc v3 vocabulary">
-        <t>The plain-text does not attempt to render all metadata from the 
-        XML.  URIs that occur in targets may be placed into parenthetical 
-        expressions or reference entries. 
-        <xref target="I-D.hoffman-xml2rfc"/>.</t>
+        <t>The plain-text does not attempt to render anything but the most
+        basic document metadata from the XML. The document layout and 
+        structure is instead guided directly by the "RFC Style Guide." 
+        URIs that occur in targets may be placed into parenthetical 
+        expressions or reference entries. <xref target="I-D.hoffman-xml2rfc"/>
+        </t>
 
         <t>Since plain-text cannot include any rich-text-style formatting, 
         such as bold or italic fonts, tags such as &lt;em&gt; and &lt;strong&gt;
@@ -226,6 +229,11 @@
     </section>
 
   <section anchor="Changes" title="Change Log for the Draft">
+    <section anchor="changes6" title="-05 to -06">
+      <t>Abstract: Changed "cut over" to "transition"</t>
+      <t>Elements from xml2rfc v3: emphasized that doc structure is guided
+         by the RFC Style Guide</t>
+    </section>
     <section anchor="changes5" title="-04 to -05">
       <t>Abstract and Introduction: Revised for better readability; 
       clarified the definition and implications of the term "plain-text"</t>
