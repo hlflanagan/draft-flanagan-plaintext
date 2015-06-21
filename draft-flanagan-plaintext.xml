@@ -16,7 +16,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-flanagan-plaintext-05" ipr="trust200902">
+<rfc category="info" docName="draft-flanagan-plaintext-06" ipr="trust200902">
 
 <!-- ***** FRONT MATTER ***** -->
 
@@ -30,10 +30,11 @@
     <address>
       <phone></phone>
       <email>rse@rfc-editor.org</email>
+      <uri>http://orcid.org/0000-0002-2647-2220</uri>
     </address>
   </author>
 
-  <date day="12" month="December" year="2014" />
+  <date day="21" month="June" year="2015" />
 
   <area>General</area>
 
@@ -199,10 +200,12 @@
     </section>
 
     <section anchor="elements" title="Elements from the xml2rfc v3 vocabulary">
-        <t>The plain-text does not attempt to render all metadata from the 
-        XML.  URIs that occur in targets may be placed into parenthetical 
-        expressions or reference entries. 
-        <xref target="I-D.hoffman-xml2rfc"/>.</t>
+        <t>The plain-text does not attempt to render anything but the most
+        basic document metadata from the XML. The document layout and 
+        structure is instead guided directly by the "RFC Style Guide." 
+        URIs that occur in targets may be placed into parenthetical 
+        expressions or reference entries. <xref target="I-D.hoffman-xml2rfc"/>
+        </t>
 
         <t>Since plain-text cannot include any rich-text-style formatting, 
         such as bold or italic fonts, tags such as &lt;em&gt; and &lt;strong&gt;
@@ -228,6 +231,8 @@
   <section anchor="Changes" title="Change Log for the Draft">
     <section anchor="changes6" title="-05 to -06">
       <t>Abstract: Changed "cut over" to "transition"</t>
+      <t>Elements from xml2rfc v3: emphasized that doc structure is guided
+         by the RFC Style Guide</t>
     </section>
     <section anchor="changes5" title="-04 to -05">
       <t>Abstract and Introduction: Revised for better readability; 
