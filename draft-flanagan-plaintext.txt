@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                           August 12, 2015
-Expires: February 13, 2016
+Intended status: Informational                           August 24, 2015
+Expires: February 25, 2016
 
 
                     Requirements for Plain-Text RFCs
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on February 13, 2016.
+   This Internet-Draft will expire on February 25, 2016.
 
 
 
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Flanagan                Expires February 13, 2016               [Page 1]
+Flanagan                Expires February 25, 2016               [Page 1]
 
 Internet-Draft               Plain-Text RFCs                 August 2015
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Flanagan                Expires February 13, 2016               [Page 2]
+Flanagan                Expires February 25, 2016               [Page 2]
 
 Internet-Draft               Plain-Text RFCs                 August 2015
 
@@ -165,7 +165,7 @@ Internet-Draft               Plain-Text RFCs                 August 2015
 
 
 
-Flanagan                Expires February 13, 2016               [Page 3]
+Flanagan                Expires February 25, 2016               [Page 3]
 
 Internet-Draft               Plain-Text RFCs                 August 2015
 
@@ -221,7 +221,7 @@ Internet-Draft               Plain-Text RFCs                 August 2015
 
 
 
-Flanagan                Expires February 13, 2016               [Page 4]
+Flanagan                Expires February 25, 2016               [Page 4]
 
 Internet-Draft               Plain-Text RFCs                 August 2015
 
@@ -277,7 +277,7 @@ Internet-Draft               Plain-Text RFCs                 August 2015
 
 
 
-Flanagan                Expires February 13, 2016               [Page 5]
+Flanagan                Expires February 25, 2016               [Page 5]
 
 Internet-Draft               Plain-Text RFCs                 August 2015
 
@@ -333,7 +333,7 @@ Internet-Draft               Plain-Text RFCs                 August 2015
 
 
 
-Flanagan                Expires February 13, 2016               [Page 6]
+Flanagan                Expires February 25, 2016               [Page 6]
 
 Internet-Draft               Plain-Text RFCs                 August 2015
 
@@ -359,7 +359,7 @@ Internet-Draft               Plain-Text RFCs                 August 2015
 
    [I-D.flanagan-nonascii]
               Flanagan, H., "The Use of Non-ASCII Characters in RFCs",
-              draft-flanagan-nonascii-04 (work in progress), January
+              draft-flanagan-nonascii-05 (work in progress), August
               2015.
 
    [I-D.hoffman-xml2rfc]
@@ -389,7 +389,7 @@ Internet-Draft               Plain-Text RFCs                 August 2015
 
 
 
-Flanagan                Expires February 13, 2016               [Page 7]
+Flanagan                Expires February 25, 2016               [Page 7]
 
 Internet-Draft               Plain-Text RFCs                 August 2015
 
@@ -445,4 +445,4 @@ Author's Address
 
 
 
-Flanagan                Expires February 13, 2016               [Page 8]
+Flanagan                Expires February 25, 2016               [Page 8]
