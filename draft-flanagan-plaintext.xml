@@ -16,7 +16,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-flanagan-plaintext-06" ipr="trust200902">
+<rfc category="info" docName="draft-flanagan-plaintext-07" ipr="trust200902">
 
 <!-- ***** FRONT MATTER ***** -->
 
@@ -34,7 +34,7 @@
     </address>
   </author>
 
-  <date day="21" month="June" year="2015" />
+  <date day="24" month="August" year="2015" />
 
   <area>General</area>
 
@@ -121,6 +121,10 @@
 
       <t>Note that this document provides guidance for plain-text RFCs; 
       Internet-Drafts are out of scope.</t>
+
+<t>The details described in this document are expected to change based on experience gained in implementing the RFC production center's toolset. Revised documents will be published capturing those changes as the toolset is completed. Other implementers must not expect those changes to remain backwards-compatible with the details described this document.</t>
+
+
     </section>
 
     <section title="Character Encoding">
