@@ -16,7 +16,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-flanagan-plaintext-07" ipr="trust200902">
+<rfc category="info" docName="draft-flanagan-plaintext-08" ipr="trust200902">
 
 <!-- ***** FRONT MATTER ***** -->
 
@@ -34,7 +34,7 @@
     </address>
   </author>
 
-  <date day="24" month="August" year="2015" />
+  <date day="3" month="September" year="2015" />
 
   <area>General</area>
 
@@ -233,6 +233,14 @@
     </section>
 
   <section anchor="Changes" title="Change Log for the Draft">
+    <section anchor="changes8" title="-07 to -08">
+      <t>Change log: forgot to update the change log for the -06 to -07 
+      changes.</t>
+    </section>
+    <section anchor="changes7" title="-06 to -07">
+      <t>Introduction: updated to state that this document does not require
+      backwards compatibility.</t>
+    </section>
     <section anchor="changes6" title="-05 to -06">
       <t>Abstract: Changed "cut over" to "transition"</t>
       <t>Elements from xml2rfc v3: emphasized that doc structure is guided
