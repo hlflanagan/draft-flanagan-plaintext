@@ -16,7 +16,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-flanagan-plaintext-07" ipr="trust200902">
+<rfc category="info" docName="draft-flanagan-plaintext-09" ipr="trust200902">
 
 <!-- ***** FRONT MATTER ***** -->
 
@@ -34,7 +34,7 @@
     </address>
   </author>
 
-  <date day="24" month="August" year="2015" />
+  <date day="24" month="November" year="2015" />
 
   <area>General</area>
 
@@ -229,10 +229,21 @@
     </section>
 
     <section anchor="Security" title="Security Considerations">
-      <t>TBD.</t>
+      <t>The requirements of the plaintext format involve no significant security considerations. As part of the larger format project, however, unintended changes to the text as a result of the transformation from the base XML file could in turn corrupt a standard, practice or critical piece of information about a protocol.</t>
     </section>
 
   <section anchor="Changes" title="Change Log for the Draft">
+    <section anchor="changes9" title="-08 to -09">
+      <t>Security Considerations: added text</t>
+    </section>
+    <section anchor="changes8" title="-07 to -08">
+      <t>Change log: forgot to update the change log for the -06 to -07 
+      changes.</t>
+    </section>
+    <section anchor="changes7" title="-06 to -07">
+      <t>Introduction: updated to state that this document does not require
+      backwards compatibility.</t>
+    </section>
     <section anchor="changes6" title="-05 to -06">
       <t>Abstract: Changed "cut over" to "transition"</t>
       <t>Elements from xml2rfc v3: emphasized that doc structure is guided
@@ -299,7 +310,7 @@
        target="http://www.rfc-editor.org/pipermail/rfc-interest/2013-May/005584.html
 ">
         <front>
-          <title>"Subject: Direction of the RFC Format Development effort", message to the rfc-interest@rfc-editor.org mailing list</title>
+          <title>Subject: Direction of the RFC Format Development effort</title>
           <author initials="H." surname="Flanagan">
              <organization></organization>
           </author>
@@ -309,7 +320,7 @@
       <reference anchor="WIDOWS"
              target="http://en.wikipedia.org/wiki/Widows_and_orphans">
          <front>
-          <title>"Widows and orphans"</title>
+          <title>Widows and orphans</title>
           <author>
             <organization>Wikipedia</organization>
           </author>
